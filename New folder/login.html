@@ -1,0 +1,164 @@
+<html>
+<head>
+<title>Bhukkads</title>
+<link rel = "icon" href =  
+"food 1.jpg" 
+        type = "image/x-icon"> 
+</head>
+<style>
+.quote{
+float:center;
+margin-top:1px;
+color:#1E1C1D;
+font-size:40px;
+text-shadow:2px 2px 5px;
+border:5px solid #353B3D;
+border-radius:50px;
+}
+.quote:hover{
+background-color:green;
+}
+a{
+text-decoration:none;
+color:#09092E;
+opacity:1;
+font-weight:900;
+text-shadow:2px 2px 4px blue;
+}
+a:hover
+{
+border:2px solid black;
+border-size:20px;
+background-color:black;
+color:white;
+text-decoration:underline;
+}
+.start{
+position:relative;
+top:200px;
+left:200px;
+}
+tr,td{
+text-decoration:none;
+color:#472E39;
+font-size:25px;
+font-family:Georgia, Times New Roman, Times, serif;
+font-style:oblique;
+padding-left:200px;
+text-align:left;
+overflow:hidden;
+
+}
+
+h1{
+color:black;
+font-size:50px;
+}
+body{
+  background-image: url("life.jpg");
+  min-height: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow:overflow-y;
+}
+.input{
+padding-top:150px;
+opacity:0.7;
+}
+.user{
+border:2px solid black;
+border-radius:500px;
+height:50px;
+width:20%;
+margin-top:20px;
+}
+button{
+background-color:#007BA1;
+letter-spacing:1px;
+opacity:1;
+}
+.in{
+color:white;
+}
+.account{
+position:relative;
+right:100px;
+color:white;
+}
+.forget{
+position:relative;
+bottom:66px;
+left:100px;
+color:white;
+}
+.facebook{
+position:relative;
+right:120px;
+}
+.twitter{
+position:relative;
+right:200px;
+}
+.insta:hover{
+border:3px solid black;
+}
+.facebook:hover{
+border:3px solid black;
+}
+.twitter:hover{
+border:3px solid black;
+}
+
+</style>
+<body bgcolor="black" align="center">
+<script>
+function upper()
+{
+var x=document.getElementById("name");
+x.value=x.value.toUpperCase();
+}
+function password()
+{
+var y=document.getElementById("pass");
+if(y.value=="iwt")
+{
+alert("sign");
+}
+else
+{
+alert("not valid");
+}
+}
+</script>
+<h1 align="left" ><i> Bhukkad's</i></h1>
+<q class="quote" <i>There is no love sincerer than the love of food.</i></q>
+<hr color="black">
+<table class="login">
+<tr>
+<td><a href="#home">Home</a></td>
+<td><a href="#about">About</a></td>
+<td><a href="#contact">Contact</a></td>
+<td><a href="#pp">Privacy policy</a></td>
+</tr>
+</table>
+<div class="input">
+<input type="text" placeholder="Username" class="user" id="name" onchange="upper()" required autofocus><br>
+<input type="password" placeholder="Password" class="user" id="pass" onchange="password()"required><br>
+</div>
+<div class="log">
+<button type="button" class ="user" id="ent"><a href="pjt.html" class="in" >Log In</a></button>
+</div>
+<p class="account"><a href="#account">Create Account</a></p><br>
+<p class="forget"><a href="#forget">Forgot password</a></p>
+<table class="social">
+<tr>
+<td style="color:black;font-weight:900">Or Login With</td>
+<td><img src="insta.png" class="insta" style="width:100px;height:100px;"></td>
+<td><img src="facebook.png" class="facebook" style="width:100px;height:100px;"></td>
+<td><img src="twitter.jpg" class="twitter" style="width:100px;height:100px;"></td>
+<tr>
+</table>
+</body>
+</html>

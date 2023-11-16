@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment Form</title>
+<script>
+function myFunction() {
+  alert("Payment is Successfull");
+}
+function validateCardholderName()
+{
+var fName = document.getElementById("Cardholdername").value;
+var re1 = /^[a-zA-Z\s\'\-]{2,15}$/;
+ if(re1.test(fName))
+{
+document.getElementById("CardholdernamePrompt").style.color = "green";
+document.getElementById("CardholdernamePrompt").innerHTML="<strong>valid</strong>";
+return true;
+}
+else
+{
+document.getElementById("CardholdernamePrompt").style.color="red";
+document.getElementById("CardholdernamePrompt").innerHTML="<strong>invalid</strong>"
+return false;
+}
+}
+function validateCardno()
+{
+var phonenumber=document.getElementById("Cardno").value;
+var re3= /^\d{16}$/;
+if(re3.test(phonenumber))
+{
+document.getElementById("CardnoPrompt").style.color="green";
+document.getElementById("CardnoPrompt").innerHTML="<strong>valid</strong>";
+return (true);
+}
+else
+{
+document.getElementById("CardnoPrompt").style.color="red";
+document.getElementById("CardnoPrompt").innerHTML="<strong>invalid</strong>";
+return (false);
+}
+}
+
+		
+</script>
+</head>
+<style>
+form {
+    margin-left: 25%;
+    margin-right:25%;
+    width: 50%;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+
+
+input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+.feed{
+text-decoration:none;
+color:white;
+}
+
+
+
+
+
+</style>
+<body>
+<form>
+<h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+             <div class="text-right" style="margin-top: -5px;"> <img src="https://img.icons8.com/color/36/000000/visa.png"> <img src="https://img.icons8.com/color/36/000000/mastercard.png"> </div>
+			
+            Name of Card Holder
+            <input name="Cardholdername" id="Cardholdername" type="text" placeholder="Name" required onblur="validateCardholderName()"><br>
+<span id="CardholdernamePrompt">&nbsp;</span><br>
+            Credit card number
+            <input name="Cardno" id="Cardno" type="text" onblur="validateCardno()" placeholder="•••• •••• •••• ••••" maxlength="16" required><br>
+						<span id="CardnoPrompt">&nbsp;</span> <br>
+            <label for="expmonth">Exp Month</label>
+            <input type="number" id="expmonth" name="expmonth" placeholder="1" min="1" max="12" required >
+            
+              
+                <label for="expyear">Exp Year</label>
+                <input type="number" id="expyear" name="expyear" placeholder="2022"  maxlength="4" required min="2020" max="2099">
+              
+              
+                <label for="cvv">CVV</label>
+                <input type="password" id="cvv" name="cvv" placeholder="•••"  maxlength="3"required >
+				<div class="mail">
+
+              </div>
+            
+          
+          
+       
+		 
+		 <button class="btn"><a href="feedback.html" class="feed">Submit</a></button>
+</form>		
+</body>
+</html>

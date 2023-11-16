@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<style>
+		label{
+			font-size: 2em;
+		}
+		.p{
+			font-size: 7em;
+			margin: -10px
+		}
+		p{
+			font-size: 2em;
+		}
+		*{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    float: left;
+    height: 200px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:150px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+		#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+	</style>
+</head>
+
+<body bgcolor=skyblue>
+<script>
+function feed() {
+	alert("Thanks for your feedback");
+}
+</script>
+	<div style="font-size: 3em;text-align: center;background-color: rgba(255,251,251,0.7)">
+		<strong><img src="https://www.freeiconspng.com/uploads/education-png-33.png" width="100" alt="Download Education Png Clipart" />
+<em>BHUKK@D's</strong></em></div>
+	<br><br>
+	<p>&nbsp;</p>
+	<fieldset style="margin: 50px">
+		<legend style="border-color: beige; border-radius: 10px">
+			<h1><img src="https://www.freeiconspng.com/uploads/education-png-2.png" width="50px" height="50px" alt="Use These Education Vector Clipart" />
+			Tell us how much did you like our serveice</h1>
+		</legend><br><br>
+			<form>
+				<label>Give us some feedback:</label>
+				<br>
+				<textarea style="height: 100px; width: 700px"></textarea>
+				<p style="font-size: 2em; margin: 0px">How much rating do you want to give us:</p>
+				<div class="rate" style="align-content: center">	 
+    <input type="radio" id="star5" name="rate" value="5" />
+    <label for="star5" title="text">5 stars</label>
+    <input type="radio" id="star4" name="rate" value="4" />
+    <label for="star4" title="text">4 stars</label>
+    <input type="radio" id="star3" name="rate" value="3" />
+    <label for="star3" title="text">3 stars</label>
+    <input type="radio" id="star2" name="rate" value="2" />
+    <label for="star2" title="text">2 stars</label>
+    <input type="radio" id="star1" name="rate" value="1" />
+    <label for="star1" title="text">1 star</label>
+		<br>
+	<br><br><center><br>
+			<div >
+  <button style="color: black; background-color: antiquewhite; height: 50px; width: 200px" type="reset" onclick="feed()">Click To submit your feedback</button>
+</div></center></div><br><br><br>
+		</form>
+		</fieldset>
+	
+</body>
+</html>
